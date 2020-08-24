@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { TodosComponent } from './component/todos/todos.component';
@@ -16,16 +17,23 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { HeaderComponent } from './header/header.component';
+import { ContainerComponent } from './container/container.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
-    CreateDialogComponent
+    CreateDialogComponent,
+    HeaderComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatListModule,
     MatButtonModule,
@@ -34,7 +42,8 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatToolbarModule
   ],
   providers: [],
   entryComponents: [CreateDialogComponent],
